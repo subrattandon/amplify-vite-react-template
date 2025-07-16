@@ -13,7 +13,7 @@ function App() {
     client.models.Todo.observeQuery().subscribe({
       next: (data) => setTodos([...data.items]),
     });
-        <button onClick={signOut}>Sign out</button>
+        
   }, []);
 
   function createTodo() {
@@ -35,6 +35,7 @@ function App() {
           key={todo.id}>{todo.content}</li>
         ))}
       </ul>
+          <button onClick={signOut}>Sign out</button>
       <div>
         🥳 App successfully hosted. Try creating a new todo.
         <br />
